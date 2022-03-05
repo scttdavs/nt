@@ -1,0 +1,7 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "main",
+    data = ["//packages/a", "//packages/b", "@npm//bson"],
+    entry_point = "index.js",
+)
