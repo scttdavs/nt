@@ -5,4 +5,5 @@ js_library(
     srcs = glob(["*.js"]),
     package_name = "a",
     visibility = ["//visibility:public"],
+    deps = ["@npm//b"],
 )

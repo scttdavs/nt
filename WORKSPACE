@@ -30,4 +30,5 @@ npm_install(
     npm_command = "install",
     strict_visibility = True,
     symlink_node_modules = True,
+    links = {"a": "//packages/a", "b": "//packages/b"}
 )
