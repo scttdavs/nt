@@ -5,7 +5,7 @@
 workspace(
     # How this workspace would be referenced with absolute labels from another workspace
     name = "nt",
-    managed_directories = {"@npm": ["client/node_modules"]},
+    managed_directories = {"@npm": ["node_modules"]},
 )
 
 load("//tools:bazel_deps.bzl", "fetch_dependencies")
@@ -26,9 +26,8 @@ npm_install(
     # Name this npm so that Bazel Label references look like @npm//package
     name = "npm",
     npm_command = "install",
-    package_json = "//client:package.json",
-    package_lock_json = "//client:package-lock.json",
-    # package_path = "/Users/hswolff/Downloads/nt/client",
+    package_json = "//:package.json",
+    package_lock_json = "//:package-lock.json",
     strict_visibility = True,
     symlink_node_modules = True,
     # links = {"a": "//packages/a", "b": "//packages/b"}

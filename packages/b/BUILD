@@ -4,7 +4,6 @@ js_library(
     name = "b",
     package_name = "b",
     srcs = glob(["*.js"]),
-    package_path = "//client",
     visibility = ["//visibility:public"],
 )
 

@@ -4,12 +4,8 @@ js_library(
     name = "a",
     package_name = "a",
     srcs = glob(["*.js"]),
-    package_path = "/Users/hswolff/Downloads/nt/client",
     visibility = ["//visibility:public"],
-    deps = [
-        "//client/packages/b",
-        "@npm//bson",
-    ],
+    deps = ["//packages/b"],
 )
 
 nodejs_binary(
