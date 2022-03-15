@@ -25,10 +25,10 @@ node_repositories(node_version = "14.18.3")
 npm_install(
     # Name this npm so that Bazel Label references look like @npm//package
     name = "npm",
-    npm_command = "install",
     package_json = "//:package.json",
     package_lock_json = "//:package-lock.json",
+    npm_command = "install",
     strict_visibility = True,
     symlink_node_modules = True,
-    # links = {"a": "//packages/a", "b": "//packages/b"}
+    links = {"a": "//packages/a", "b": "//packages/b"}
 )

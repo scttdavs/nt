@@ -1,17 +1,9 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "js_library", "nodejs_binary")
+load("@build_bazel_rules_nodejs//:index.bzl", "js_library")
 
 js_library(
     name = "a",
-    package_name = "a",
     srcs = glob(["*.js"]),
+    package_name = "a",
     visibility = ["//visibility:public"],
-    deps = ["//packages/b"],
-)
-
-nodejs_binary(
-    name = "main",
-    data = [
-        ":a",
-    ],
-    entry_point = "index.js",
+    deps = ["@npm//b"],
 )

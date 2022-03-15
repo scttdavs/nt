@@ -1,18 +1,17 @@
 {
-  "name": "nt",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "@bazel/bazelisk": "latest",
-    "@bazel/buildifier": "latest",
-    "@bazel/ibazel": "latest"
-  },
-  "scripts": {
-    "build": "bazel build //...",
-    "start": "bazel run //:main",
-    "test": "bazel test //..."
-  },
-  "dependencies": {
-    "bson": "^4.6.1"
-  }
+    "name": "nt",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@bazel/bazelisk": "latest",
+        "@bazel/buildifier": "latest",
+        "@bazel/ibazel": "latest"
+    },
+    "scripts": {
+        "build": "bazel build //...",
+        "test": "bazel test //..."
+    },
+    "dependencies": {
+        "bson": "^4.6.1"
+    }
 }

@@ -1,3 +1,1 @@
-module.exports = 'this is package b';
-
-console.log('bbbbb');
+module.exports = "this is package b";
